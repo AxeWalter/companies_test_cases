@@ -7,7 +7,8 @@ The goals of this assessment were:
 - Integrate AI/LLM to search for documentation gaps. The goal here is to draw two article outlines that "are missing" from the documentation.
 
   
-To accomplish that we split the tasks into three different python scripts and one extra to “orchestrate the CRON job”. They are: scraper.py, updates.py, gaps_analysis.py and main.py.
+To accomplish that we split the tasks into three different python scripts and one extra to “orchestrate the CRON job”. They are: scraper.py, updates.py, gaps_analysis.py and main.py.<br><br>
+The prompts used are in the [prompts file](prompts.md).
 
 ## scraper.py
 
