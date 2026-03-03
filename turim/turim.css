@@ -1,0 +1,90 @@
+.barra-superior {
+    margin-bottom: 20px;
+}
+
+.linha-entrada {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.container-principal {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.container-lista {
+    width: 300px;
+}
+
+.cabecalho-lista {
+    background-color: #c0c0c0;
+    padding: 6px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.conteudo-lista {
+    min-height: 150px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.json {
+    width: 600px;
+    height: 350px;
+    border: 1px solid;
+}
+
+.linha-pessoa {
+    display: flex;
+    gap: 2px;
+    align-items: stretch;
+    margin-bottom: 2px;
+    width: 100%;
+}
+
+.linha-pai .nome-pessoa,
+.linha-pai .container-botao {
+    background-color: #d3d3d3;
+}
+
+.linha-filho .nome-pessoa,
+.linha-filho .container-botao {
+    background-color: #e6e6e6;
+}
+
+.nome-pessoa {
+    flex: 3;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+.container-botao {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 4px;
+}
+
+.container-botao button {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.btn-adicionar-filho {
+    width: 40%;
+    display: block;
+    margin: 4px auto 10px auto;
+    cursor: pointer;
+}
