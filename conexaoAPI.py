@@ -30,3 +30,4 @@ def request_api(total_number_of_cryptos=100, currency="BRL"):
     except (ConnectionError, Timeout, TooManyRedirects) as e:
         print(f"Error: {e}")
         return None
+
