@@ -1,6 +1,4 @@
 from datetime import datetime, timedelta
-from conexaoAPI import request_api
-from db_configs.data_manipulation import insert_all
 
 
 def parsing_data(raw_data, currency="BRL"):
@@ -28,8 +26,4 @@ def parsing_data(raw_data, currency="BRL"):
 
     return final_data
 
-
-data = request_api(100, "BRL")
-full_data = parsing_data(data)
-insert_all(full_data)
 
