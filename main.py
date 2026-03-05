@@ -11,7 +11,7 @@ logging.basicConfig(level=logging.INFO, filename="log.log", filemode="a",
                     format="%(asctime)s - %(levelname)s - %(message)s")
 
 
-NUMBER_OF_CRYPTOS = 1000  # Define quantas cryptos serão extraídas via API. 200 cryptos = 1 token da API.
+NUMBER_OF_CRYPTOS = 200  # Define quantas cryptos serão extraídas via API. 200 cryptos = 1 token da API.
 CURRENCY = "BRL"  # Define qual moeda será utilizada para os dados da API. Padrão é dólar USD.
 SCHEDULE_MINUTES_INTERVAL = 30  # Define de quantos em quantos minutos o script roda.
 CHECK_DELAY_FOR_SCHEDULE = 60  # Define de quanto em quanto tempo o script vai checar o tempo para ver se passaram 30m.

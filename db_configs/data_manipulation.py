@@ -11,6 +11,7 @@ def insert_crypto(session, coin):
             name=coin["name"],
             symbol=coin["symbol"],
             infinite_supply=coin["infinite_supply"],
+            is_stablecoin=coin["is_stablecoin"],
             max_supply=coin["max_supply"],
         )
         session.add(crypto)
@@ -18,6 +19,9 @@ def insert_crypto(session, coin):
     else:
         if crypto.infinite_supply != coin["infinite_supply"]:
             crypto.infinite_supply = coin["infinite_supply"]
+
+        if crypto.is_stablecoin != coin["is_stablecoin"]:
+            crypto.is_stablecoin = coin["is_stablecoin"]
 
         if (crypto.max_supply is None) != (coin["max_supply"] is None):
             crypto.max_supply = coin["max_supply"]

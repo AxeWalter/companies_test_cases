@@ -9,6 +9,7 @@ class Cryptos(Base):
     name = Column(String(255), nullable=False)
     symbol = Column(String(255))
     infinite_supply = Column(Boolean)
+    is_stablecoin = Column(Boolean, default=False)
     max_supply = Column(Numeric(20,2)) # Há algumas coins com frações de supply.
 
 
@@ -27,7 +28,7 @@ class Monitoring(Base):
     circulating_supply = Column(Numeric(20,2))
     market_cap = Column(Numeric(20,2))
     volume_24h = Column(Numeric(20,2))
-    percent_change_24h = Column(Numeric(5,2))
+    percent_change_24h = Column(Numeric(20,2)) # Uma moeda conseguiu quebrar 10, 2 : )
     timestamp = Column(DateTime, nullable=False)
 
 
