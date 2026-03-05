@@ -101,10 +101,19 @@ market_cap_dominance = DDL ("""
     WHERE rank > 10 AND timestamp = (SELECT MAX(timestamp) FROM monitoring);
 """)
 
+latest_monitoring = DDL("""
+CREATE OR REPLACE VIEW latest_monitoring AS
+SELECT monitoring.*, cryptos.name, cryptos.symbol, cryptos.infinite_supply, cryptos.is_stablecoin, cryptos.max_supply
+FROM monitoring
+JOIN cryptos ON cryptos.id = monitoring.crypto_id
+WHERE monitoring.timestamp = (SELECT MAX(timestamp) FROM monitoring);
+""")
+
 event.listen(Base.metadata, "after_create", total_mkt_cap_view)
 event.listen(Base.metadata, "after_create", total_volume_24h_view)
 event.listen(Base.metadata, "after_create", biggest_winner_view)
 event.listen(Base.metadata, "after_create", biggest_loser_view)
 event.listen(Base.metadata, "after_create", market_cap_dominance)
+event.listen(Base.metadata, "after_create", latest_monitoring)
 
 
