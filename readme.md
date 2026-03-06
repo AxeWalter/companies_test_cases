@@ -84,7 +84,7 @@ desse arquivo está definido como `a`, logo, os logs são históricos. Caso dese
 ## Power BI
 
 ### Conexão
-1. Abra o arquivo `onetopiaBI.pbit` no Power BI Desktop
+1. Abra o arquivo `dashEstrutura.pbit` no Power BI Desktop
 2. Inicialmente o arquivo vai carregar apenas a estrutura, sem os dados
 3. Siga o caminho **Transformar Dados** → **Configurações da Fonte de Dados**
 4. Selecione a conexão e clique em **Alterar Fonte**
