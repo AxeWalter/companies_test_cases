@@ -94,6 +94,8 @@ desse arquivo está definido como `a`, logo, os logs são históricos. Caso dese
 
 ### Funcionalidades
 
+**Nota: essa dashboard foi projetada para lidar com dados temporais, logo, para funcionalidade ideal é necessário 
+ter um histórico de dados. Visualizações como a variação do valor de mercado só funcionarão com dados históricos.**
 - Barra superior com informações globais como:
   - Valor de mercado atual agregado (top 200)
   - Variação desse valor de mercado nos últimos 30m
